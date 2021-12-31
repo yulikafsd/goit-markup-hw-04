@@ -1,0 +1,437 @@
+:root {
+  /* Палитра цветов текста и фона */
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --primary-white-color: #ffffff;
+  --secondary-white-color: rgba(255, 255, 255, 0.6);
+  --accent-color: #2196f3;
+  --section-bg-color: #f5f4fa;
+  --footer-bg-color: #2f303a;
+  --header-border-color: #ececec;
+  --hero-button-hover-color: #188ce8;
+  --card-list-gap: 15px;
+  --card-border: 1px solid #eeeeee;
+}
+
+/* ---------------- Style Reset ---------------- */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+
+/* ------------------ Утилиты ------------------ */
+
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* Лучше задавать мин или макс ширину контейнеру? */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* outline: 1px solid tomato; */
+}
+
+.section {
+  padding: 94px 0;
+}
+
+/* --------- Акцент, текущая страница --------- */
+
+.accent {
+  color: var(--accent-color);
+}
+
+.nav-link.current {
+  color: var(--accent-color);
+}
+
+/* ------------------ Header ------------------ */
+
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.header > .container,
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-item:not(:last-child),
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+  color: var(--title-text-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contact-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+
+/* ------------------ Секция Hero ------------------ */
+/* Временный цвет фона для удобства просмотра 
+   белого заголовка: */
+
+.section.hero {
+  background-color: var(--footer-bg-color);
+  text-align: center;
+  padding: 200px 0;
+}
+
+.hero-title {
+  width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: var(--primary-white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-button {
+  padding: 10px 32px;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--hero-button-hover-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------- Заголовки main ---------------- */
+.features-title,
+.profile-title,
+.team-title,
+.portfolio-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* ---------------- Секция Features ---------------- */
+
+/* ----------- Первый вариант ------- */
+
+.features-list {
+  display: flex;
+  margin: -15px;
+}
+
+.features-item {
+  margin: 15px;
+  width: calc((100% - 120px) / 4);
+}
+
+/* ----------- Второй вариант ------- */
+
+/* .features-list {
+  display: flex;
+} */
+
+/* если больше 4х эл-тов в списке: */
+/* .features-item:not(:nth-child(4n)) {
+  margin-right: 30px;
+} */
+
+/* если только 4 эл-та в списке: */
+/* .features-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
+.features-subtitle {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/* ------------------ Секция Profile ------------------ */
+
+.profile {
+  padding-top: 0;
+}
+
+.profile-title {
+  margin-bottom: 50px;
+}
+
+.profile-list {
+  display: flex;
+}
+
+.profile-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* ------------------ Секция Team ------------------ */
+
+.team {
+  background-color: var(--section-bg-color);
+}
+
+.team-title {
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  margin: calc(-1 * var(--card-list-gap));
+}
+
+.team-card {
+  padding: calc(2 * var(--card-list-gap)) 0;
+}
+
+.team-item {
+  margin: var(--card-list-gap);
+  width: calc(100% - (8 * var(--card-list-gap) / 4));
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-subtitle {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+/* ------------------ Footer ------------------ */
+
+.footer {
+  padding: 60px 0;
+  background-color: var(--footer-bg-color);
+}
+
+.footer-logo {
+  display: inline-block;
+  padding-bottom: 20px;
+  color: var(--primary-white-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-link {
+  color: var(--primary-white-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--secondary-white-color);
+}
+
+.footer-link.alfa {
+  color: var(--secondary-white-color);
+}
+
+.footer-link.alfa:hover,
+.footer-link.alfa:focus {
+  color: var(--primary-white-color);
+}
+
+/* ------------------ Страница Portfolio ------------------ */
+
+/* ------------------ Фильтра ------------------ */
+
+.filter-list {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+/* Почему здесь вместо justify-content не получается 
+установить автоматические margin-left u margin-right?
+  margin-left: auto;
+  margin-right: auto; */
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-button {
+  padding: 6px 22px;
+  background-color: var(--section-bg-color);
+  color: var(--title-text-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.filter-button.filter-active {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+/* ------------------ Портфолио ------------------ */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--card-list-gap));
+}
+
+.portfolio-item {
+  margin: var(--card-list-gap);
+  flex-basis: calc(100% / 3 - 2 * var(--card-list-gap));
+  flex-basis: calc((100% - 90px) / 3);
+}
+
+.portfolio-subtitle {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-card {
+  padding: 20px 24px;
+  border: var(--card-border);
+  border-top: 0;
+}
+
+.filter-name {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.87;
+}

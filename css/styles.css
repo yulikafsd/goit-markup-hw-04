@@ -8,9 +8,17 @@
   --section-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
   --header-border-color: #ececec;
+  --hero-bg-color: #c4c4c4;
   --hero-button-hover-color: #188ce8;
   --card-list-gap: 15px;
   --card-border: 1px solid #eeeeee;
+  --hero-button-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  --team-item-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --filter-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --portfolio-item-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* ---------------- Style Reset ---------------- */
@@ -156,6 +164,10 @@ body {
   letter-spacing: 0.02em;
 }
 
+.header-icon {
+  fill: red;
+}
+
 .nav-link:hover,
 .nav-link:focus,
 .contact-link:hover,
@@ -164,11 +176,9 @@ body {
 }
 
 /* ------------------ Секция Hero ------------------ */
-/* Временный цвет фона для удобства просмотра 
-   белого заголовка: */
 
 .section.hero {
-  background-color: var(--footer-bg-color);
+  background-color: var(--hero-bg-color);
   text-align: center;
   padding: 200px 0;
 }
@@ -202,7 +212,7 @@ body {
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--hero-button-hover-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--hero-button-shadow);
 }
 
 /* --------------- Заголовки main ---------------- */
@@ -297,8 +307,7 @@ body {
   margin: var(--card-list-gap);
   width: calc(100% - (8 * var(--card-list-gap) / 4));
   background-color: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--team-item-shadow);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -366,11 +375,6 @@ body {
   justify-content: center;
 }
 
-/* Почему здесь вместо justify-content не получается 
-установить автоматические margin-left u margin-right?
-  margin-left: auto;
-  margin-right: auto; */
-
 .filter-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -391,13 +395,13 @@ body {
 
 .filter-button:hover,
 .filter-button:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--filter-button-shadow);
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 
 .filter-button.filter-active {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--filter-button-shadow);
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
@@ -414,6 +418,10 @@ body {
   margin: var(--card-list-gap);
   flex-basis: calc(100% / 3 - 2 * var(--card-list-gap));
   flex-basis: calc((100% - 90px) / 3);
+}
+
+.portfolio-item:hover {
+  box-shadow: var(--portfolio-item-shadow);
 }
 
 .portfolio-subtitle {

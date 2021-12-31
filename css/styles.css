@@ -156,6 +156,8 @@ body {
 }
 
 .contact-link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
@@ -165,7 +167,8 @@ body {
 }
 
 .header-icon {
-  fill: red;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .nav-link:hover,

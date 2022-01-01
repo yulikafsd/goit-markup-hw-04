@@ -6,6 +6,7 @@
   --secondary-white-color: rgba(255, 255, 255, 0.6);
   --accent-color: #2196f3;
   --section-bg-color: #f5f4fa;
+  --icons-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
   --header-border-color: #ececec;
   --hero-bg-color: #c4c4c4;
@@ -91,7 +92,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px solid tomato; */
 }
 
 .section {
@@ -129,9 +129,12 @@ body {
   margin-left: auto;
 }
 
-.nav-item:not(:last-child),
-.contact-item:not(:last-child) {
+.nav-item:not(:last-child) {
   margin-right: 50px;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .nav-logo {
@@ -181,9 +184,17 @@ body {
 /* ------------------ Секция Hero ------------------ */
 
 .section.hero {
-  background-color: var(--hero-bg-color);
   text-align: center;
   padding: 200px 0;
+}
+
+.container-fluid {
+  min-height: 600px;
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero.jpg'), var(--hero-bg-color);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  object-fit: cover;
 }
 
 .hero-title {
@@ -242,6 +253,19 @@ body {
 .features-item {
   margin: 15px;
   width: calc((100% - 120px) / 4);
+}
+
+.features-icons {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background: var(--icons-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.icon-features {
+  margin: 25px 100px;
 }
 
 /* ----------- Второй вариант ------- */

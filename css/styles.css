@@ -576,15 +576,14 @@ body {
   flex-basis: calc((100% - 90px) / 3);
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
-  box-shadow: var(--portfolio-item-shadow);
+.portfolio-link {
+  display: block;
 }
 
-/* .portfolio-link:hover,
+.portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: var(--portfolio-item-shadow);
-} */
+}
 
 .portfolio-subtitle {
   color: var(--title-text-color);

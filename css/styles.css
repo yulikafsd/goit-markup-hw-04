@@ -361,10 +361,11 @@ body {
 
 .team-icons-list {
   display: flex;
-  justify-content: space-between;
-  width: 206px;
-  margin-right: auto;
-  margin-left: auto;
+  justify-content: center;
+}
+
+.team-icon-item + .team-icon-item {
+  margin-left: 10px;
 }
 
 .team-icon-link {
@@ -381,10 +382,12 @@ body {
 }
 
 .team-icon-link:hover,
-.team-icon-link:hover .team-icon,
-.team-icon-link:focus,
-.team-icon-link:focus .team-icon {
+.team-icon-link:focus {
   background-color: var(--accent-color);
+}
+
+.team-icon-link:hover .team-icon,
+.team-icon-link:focus .team-icon {
   fill: var(--primary-white-color);
 }
 
@@ -408,10 +411,6 @@ body {
   width: calc(100% - (12 * var(--card-list-gap) / 6));
 }
 
-.icon-clients {
-  fill: var(--social-icon-color);
-}
-
 .clients-link {
   display: flex;
   justify-content: center;
@@ -420,6 +419,10 @@ body {
   height: 92px;
   border: var(--clients-border);
   border-radius: 4px;
+}
+
+.icon-clients {
+  fill: var(--social-icon-color);
 }
 
 .clients-link:hover,

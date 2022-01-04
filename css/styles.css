@@ -262,15 +262,13 @@ body {
 
 .features-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
   background: var(--icons-bg-color);
   border-radius: 4px;
   margin-bottom: 30px;
-}
-
-.icon-features {
-  margin: 25px 100px;
 }
 
 /* ----------- Второй вариант ------- */
@@ -409,17 +407,27 @@ body {
 }
 
 .icon-clients {
-  display: block;
-  padding: 16px 32px;
+  fill: var(--social-icon-color);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
   border: var(--clients-border);
   border-radius: 4px;
-  fill: var(--social-icon-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
 }
 
 .clients-link:hover .icon-clients,
 .clients-link:focus .icon-clients {
   fill: var(--accent-color);
-  border-color: var(--accent-color);
 }
 
 /* ------------------ Footer ------------------ */
@@ -508,7 +516,8 @@ body {
   fill: var(--primary-white-color);
 }
 
-.footer-icon-link:hover {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -571,6 +580,11 @@ body {
 .portfolio-item:focus {
   box-shadow: var(--portfolio-item-shadow);
 }
+
+/* .portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: var(--portfolio-item-shadow);
+} */
 
 .portfolio-subtitle {
   color: var(--title-text-color);

@@ -145,7 +145,8 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 93px;
-  color: var(--title-text-color);
+  /* color: var(--title-text-color); */
+  color: red;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -375,6 +376,26 @@ body {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  color: var(--social-icon-color);
+}
+
+.team-icon {
+  fill: currentColor;
+}
+
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+/* .team-icon-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .team-icon {
@@ -389,7 +410,7 @@ body {
 .team-icon-link:hover .team-icon,
 .team-icon-link:focus .team-icon {
   fill: var(--primary-white-color);
-}
+} */
 
 /* ------------------ Секция Clients ------------------ */
 

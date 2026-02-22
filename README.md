@@ -1,2 +1,2 @@
-# goit-markup-hw-03
-ДЗ 2 - WebStudio. Геометрія. Flex.
+# goit-markup-hw-04
+ДЗ 4 - WebStudio. Декор. Анімація.

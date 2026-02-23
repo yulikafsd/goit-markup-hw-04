@@ -294,6 +294,38 @@ main {              /* Крок 2. Притискаємо футер вниз */
     padding: 32px 0;
     text-align: center;
 }
+
+.team .text {
+    margin-bottom: 8px;
+}
+
+.socials-list {
+    display: flex;
+    gap: 16px;
+}
+
+.team .socials-list {
+    justify-content: center;
+}
+.socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-brand-color);
+}
+
+.socials-icon {
+    fill: var(--light-mode-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+    background-color: var(--pressed-state-color);
+}
+
 /* #endregion */
 
 /* Portfolio #region */
@@ -327,6 +359,15 @@ main {              /* Крок 2. Притискаємо футер вниз */
     background-color: var(--dark-color);
 }
 
+.footer .container {
+    display: flex;
+    align-items: start;
+}
+
+.footer-wrapper:first-child {
+    margin-right: 120px;
+}
+
 .footer .logo-link {
     display: inline-block;
     margin-bottom: 16px;
@@ -338,6 +379,19 @@ main {              /* Крок 2. Притискаємо футер вниз */
 
 .footer-text {
     color: var(--light-mode-color);
+}
+
+.socials-subtitle {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: inherit;
+    text-transform: none;
+    color: #fff;
+}
+
+.footer .socials-link:hover,
+.footer .socials-link:focus {
+    background-color: var(--success-color);
 }
 
 /* #endregion */

@@ -159,6 +159,11 @@ main {              /* Крок 2. Притискаємо футер вниз */
 .nav-link {
     font-weight: var(--font-weight-medium);
     color: var(--dark-color);
+    transition: color 250ms ease-in-out 0ms;
+}
+
+.address-link {
+    transition: color 250ms ease-in-out 0ms;
 }
 
 .nav-link:hover,
@@ -175,6 +180,7 @@ main {              /* Крок 2. Притискаємо футер вниз */
     left: 0;
     width: 100%;
     height: 4px;
+    z-index: 999;
     border-radius: 2px;
     background-color: var(--pressed-state-color);
 }
@@ -217,13 +223,13 @@ main {              /* Крок 2. Притискаємо футер вниз */
     letter-spacing: var(--letter-spacing-second);
     text-transform: capitalize;
     color: var(--white-background-color);
-    box-shadow: var(--button-shadow);
     background-color: var(--primary-brand-color);
+    box-shadow: var(--button-shadow);
+    transition: background-color 250ms ease-in-out 0ms;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-    box-shadow: var(--button-shadow);
     background-color: var(--pressed-state-color);
 }
 /* #endregion */
@@ -342,15 +348,16 @@ main {              /* Крок 2. Притискаємо футер вниз */
     height: 40px;
     border-radius: 50%;
     background-color: var(--primary-brand-color);
-}
-
-.socials-icon {
-    fill: var(--light-mode-color);
+    transition: background-color 250ms ease-in-out 0ms;
 }
 
 .socials-link:hover,
 .socials-link:focus {
     background-color: var(--pressed-state-color);
+}
+
+.socials-icon {
+    fill: var(--light-mode-color);
 }
 
 /* #endregion */
@@ -364,6 +371,7 @@ main {              /* Крок 2. Притискаємо футер вниз */
 
 .portfolio-list-item {
     flex-basis: calc((100% - (24px*2)) / 3);
+    transition: box-shadow 250ms ease-in-out 0ms;
 }
 
 .portfolio-list-item:hover,

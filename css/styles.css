@@ -152,6 +152,10 @@ main {              /* Крок 2. Притискаємо футер вниз */
     color: var(--dark-color);
 }
 
+.nav-list-item {
+    position: relative;
+}
+
 .nav-link {
     font-weight: var(--font-weight-medium);
     color: var(--dark-color);
@@ -162,6 +166,17 @@ main {              /* Крок 2. Притискаємо футер вниз */
 .address-link:hover,
 .address-link:focus {
     color: var(--pressed-state-color);
+}
+
+.active.nav-link:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--pressed-state-color);
 }
 /* #endregion */
 

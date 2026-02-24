@@ -110,6 +110,7 @@ main {              /* Крок 2. Притискаємо футер вниз */
 .header {
     border-bottom: 1px solid var(--accent-color);
     background-color: var(--white-background-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -152,10 +153,6 @@ main {              /* Крок 2. Притискаємо футер вниз */
     color: var(--dark-color);
 }
 
-.nav-list-item {
-    position: relative;
-}
-
 .nav-link {
     font-weight: var(--font-weight-medium);
     color: var(--dark-color);
@@ -170,6 +167,11 @@ main {              /* Крок 2. Притискаємо футер вниз */
 .nav-link:focus,
 .address-link:hover,
 .address-link:focus {
+    color: var(--pressed-state-color);
+}
+
+.active {
+    position: relative;
     color: var(--pressed-state-color);
 }
 
@@ -195,7 +197,7 @@ main {              /* Крок 2. Притискаємо футер вниз */
     margin: 0 auto;
     text-align: center;
     background-color: var(--dark-color);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -344,6 +346,7 @@ main {              /* Крок 2. Притискаємо футер вниз */
 
 .team .socials-list {
     justify-content: center;
+    gap: 24px;
 }
 .socials-link {
     display: flex;
@@ -395,9 +398,7 @@ main {              /* Крок 2. Притискаємо футер вниз */
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 40px;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding: 40px 32px;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     color: var(--light-mode-color);
@@ -427,7 +428,7 @@ main {              /* Крок 2. Притискаємо футер вниз */
 
 .footer .container {
     display: flex;
-    align-items: start;
+    align-items: baseline;
 }
 
 .footer-wrapper:first-child {
@@ -447,12 +448,10 @@ main {              /* Крок 2. Притискаємо футер вниз */
     color: var(--light-mode-color);
 }
 
-.socials-subtitle {
+.socials-text {
     margin-bottom: 16px;
-    font-size: 16px;
-    line-height: inherit;
-    text-transform: none;
-    color: #fff;
+    font-weight: var(--font-weight-medium);
+    color: var(--white-background-color);
 }
 
 .footer .socials-link:hover,
